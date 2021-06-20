@@ -1,19 +1,44 @@
 # Pixel Dimensions for Tailwind CSS
-This plugin allows you to quickly generate widths and heights in pixels.
+
+This plugin allows you to quickly generate pixel classes for Tailwind CSS.
 
 ## Requirements
 
-This plugin requires Tailwind CSS 1.2 or later.
+This plugin requires Tailwind CSS 2.2.2 or later.
 
 ## Installation
 
 ```bash
-yarn add tailwindcss-pixel-dimensions
+yarn add proto-tailwindcss-pixels
 ```
 
 ## Usage
 
 The following plugin options are available. See below how these are passed (via an object) to the plugin in your `tailwind.config.js`.
+
+## Supported Tags
+
+This plugin currently support the following tags in Options:
+
+```
+const tags = [
+  'fontSize', 
+  'height', 
+  'lineHeight', 
+  'spacing', 
+  'width',
+]
+```
+
+Specifying any of those in options will generate pixel classes as shown below.
+
+> CAVEAT:  if you want the full 900 pixel variations to be generated, you have to pass an empty object in the options:
+> 
+> ```
+> width: {},
+> ```
+> 
+> The plugin no longer generates width & height by default, you must specify which tags you want to generate...
 
 ## Options Available
 Pass along a number value to generate that many font sizes.
@@ -23,7 +48,7 @@ Pass along a number value to generate that many font sizes.
 module.exports = {
   plugins: [
     // Generates 10 widths and heights in pxs
-    require('tailwindcss-pixel-dimensions')({
+    require('proto-tailwindcss-pixels')({
         width: {
           total: 10, // 900 is the default
           // startingSize: 0, // default
