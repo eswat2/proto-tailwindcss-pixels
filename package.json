@@ -1,13 +1,13 @@
 {
   "name": "proto-tailwindcss-pixels",
   "version": "0.0.3",
-  "description": "Tailwind CSS plugin that generates pixel classes for tricky pixel-perfect layouts.",
+  "description": "Tailwind CSS 2.x plugin that generates pixel classes for tricky pixel-perfect layouts.",
   "main": "index.js",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",
-  "repository": "https://github.com/eswat2/tailwindcss-pixel-dimensions.git",
-  "bugs": "https://github.com/eswat2/tailwindcss-pixel-dimensions/issues",
-  "homepage": "https://github.com/eswat2/tailwindcss-pixel-dimensions",
+  "repository": "https://github.com/eswat2/proto-tailwindcss-pixels.git",
+  "bugs": "https://github.com/eswat2/proto-tailwindcss-pixels/issues",
+  "homepage": "https://github.com/eswat2/proto-tailwindcss-pixels",
   "scripts": {
     "test": "jest",
     "deploy": "echo -- run [ np patch ]"
