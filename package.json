@@ -1,8 +1,8 @@
 {
   "name": "proto-tailwindcss-pixels",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "Tailwind CSS plugin that generates pixel classes for tricky pixel-perfect layouts.",
-  "main": "dist/index.js",
+  "main": "index.js",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",
   "repository": "https://github.com/eswat2/tailwindcss-pixel-dimensions.git",
