@@ -1,37 +1,29 @@
 {
-  "name": "tailwindcss-pixel-dimensions",
+  "name": "proto-tailwindcss-pixels",
   "version": "1.0.2",
-  "description": "Tailwind CSS plugin that generates widths and heights in pixels for tricky pixel-perfect layouts.",
+  "description": "Tailwind CSS plugin that generates pixel classes for tricky pixel-perfect layouts.",
+  "main": "dist/index.js",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",
-  "repository": "https://github.com/robksawyer/tailwindcss-pixel-dimensions.git",
-  "bugs": "https://github.com/robksawyer/tailwindcss-pixel-dimensions/issues",
-  "homepage": "https://github.com/robksawyer/tailwindcss-pixel-dimensions",
+  "repository": "https://github.com/eswat2/tailwindcss-pixel-dimensions.git",
+  "bugs": "https://github.com/eswat2/tailwindcss-pixel-dimensions/issues",
+  "homepage": "https://github.com/eswat2/tailwindcss-pixel-dimensions",
   "scripts": {
-    "test": "jest --watchAll",
-    "version": "auto-changelog -p && git add CHANGELOG.md",
-    "release": "f(){ release-it $1 && github-release-from-changelog ;};f"
-  },
-  "auto-changelog": {
-    "output": "CHANGELOG.md",
-    "template": "keepachangelog",
-    "unreleased": true,
-    "commitLimit": false
+    "test": "jest",
+    "deploy": "echo -- run [ np patch ]"
   },
   "dependencies": {
-    "lodash": "^4.17.19",
-    "postcss-selector-parser": "^6.0.2"
+    "lodash": "4.17.21",
+    "postcss-selector-parser": "6.0.6"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "auto-changelog": "^2.2.0",
-    "github-release-from-changelog": "^2.1.1",
-    "jest": "^26.1.0",
-    "jest-matcher-css": "^1.1.0",
-    "postcss": "^7.0.32",
-    "release-it": "^13.6.5",
-    "tailwindcss": "^1.5.1"
+    "jest": "27.0.4",
+    "jest-matcher-css": "1.1.0",
+    "postcss": "8.3.5",
+    "rollup": "2.52.1",
+    "tailwindcss": "2.2.2"
   }
 }

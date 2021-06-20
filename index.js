@@ -1,6 +1,6 @@
 /**
- * TailwindCSS Font Sizes
- * Generates font sizes in ems
+ * TailwindCSS Pixels Sizes
+ * Generates pixel sizes via plugin... [ height, width, lineHeight ]
  * @file index.js
  */
 const plugin = require('tailwindcss/plugin')
@@ -9,7 +9,7 @@ const _ = require('lodash')
 
 /**
  * getSizes
- * Handles getting sizes in pixels
+ * Handles getting sizes in pixels...
  * @param {int} totalSizes
  * @param {int} startingValue
  * @return {object}
@@ -35,35 +35,28 @@ module.exports = plugin.withOptions(
     }
   },
   function (options) {
-    // Widths
-    // Option defaults
-    // {
-    //    total: 900,
-    //    startingSize: 0,
-    // }
-    const widths = getSizes(
-      (options && options.width && options.width.total) || 900,
-      (options && options.width && options.width.startingSize) || 0
-    )
-    const heights = getSizes(
-      (options && options.height && options.height.total) || 900,
-      (options && options.height && options.height.startingSize) || 0
-    )
-    return {
+    const tags = ['fontSize', 'height', 'lineHeight', 'spacing', 'width']
+
+    const output = {
       theme: {
-        // fontSizes: {
-        extend: {
-          width: {
-            ...widths,
-          },
-          height: {
-            ...heights,
-          },
-        },
+        extend: {},
       },
-      // variants: {
-      //   fontSizes: [],
-      // },
     }
+
+    if (options) {
+      const keys = Object.keys(options)
+
+      keys.forEach((key) => {
+        if (tags.includes(key)) {
+          const results = getSizes(
+            options[key].total || 900,
+            options[key].startingSize || 0
+          )
+          output.theme.extend[key] = { ...results }
+        }
+      })
+    }
+
+    return output
   }
 )
