@@ -4,8 +4,6 @@
  * @file index.js
  */
 const plugin = require('tailwindcss/plugin')
-const _ = require('lodash')
-// const selectorParser = require('postcss-selector-parser')
 
 /**
  * getSizes

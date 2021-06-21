@@ -12,16 +12,15 @@
     "test": "jest",
     "deploy": "echo -- run [ np patch ]"
   },
-  "dependencies": {
-    "lodash": "4.17.21",
-    "postcss-selector-parser": "6.0.6"
-  },
+  "dependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "autoprefixer": "10.2.6",
     "jest": "27.0.4",
     "jest-matcher-css": "1.1.0",
+    "lodash": "4.17.21",
     "postcss": "8.3.5",
     "rollup": "2.52.1",
     "tailwindcss": "2.2.2"
