@@ -22,10 +22,14 @@ This plugin currently support the following tags in Options:
 
 ```
 const tags = [
-  'fontSize', 
-  'height', 
-  'lineHeight', 
-  'spacing', 
+  'fontSize',
+  'height',
+  'lineHeight',
+  'maxHeight',
+  'maxWidth',
+  'minHeight',
+  'minWidth',
+  'spacing',
   'width',
 ]
 ```
@@ -33,11 +37,11 @@ const tags = [
 Specifying any of those in options will generate pixel classes as shown below.
 
 > CAVEAT:  if you want the full 900 pixel variations to be generated, you have to pass an empty object in the options:
-> 
+>
 > ```
 > width: {},
 > ```
-> 
+>
 > The plugin no longer generates width & height by default, you must specify which tags you want to generate...
 
 ## Options Available

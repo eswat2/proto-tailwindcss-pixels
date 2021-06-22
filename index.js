@@ -33,7 +33,17 @@ module.exports = plugin.withOptions(
     }
   },
   function (options) {
-    const tags = ['fontSize', 'height', 'lineHeight', 'spacing', 'width']
+    const tags = [
+      'fontSize',
+      'height',
+      'lineHeight',
+      'maxHeight',
+      'maxWidth',
+      'minHeight',
+      'minWidth',
+      'spacing',
+      'width',
+    ]
 
     const output = {
       theme: {

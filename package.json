@@ -10,7 +10,8 @@
   "homepage": "https://github.com/eswat2/proto-tailwindcss-pixels",
   "scripts": {
     "test": "jest",
-    "deploy": "echo -- run [ np patch ]"
+    "deploy": "echo -- run [ np patch ]",
+    "format": "prettier --write *.js cSpell.json"
   },
   "dependencies": {},
   "publishConfig": {
