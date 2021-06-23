@@ -45,7 +45,7 @@ Specifying any of those in options will generate pixel classes as shown below.
 > The plugin no longer generates width & height by default, you must specify which tags you want to generate...
 
 ## Options Available
-Pass along a number value to generate that many font sizes.
+You can pass along number values to define the range of the generated sizes.
 
 ```js
 // tailwind.config.js
@@ -54,19 +54,19 @@ module.exports = {
     // Generates 10 widths and heights in pxs
     require('proto-tailwindcss-pixels')({
         width: {
-          total: 10, // 900 is the default
-          // startingSize: 0, // default
+          stop: 10, // 900 is the default
+          // start: 0, // default
         },
         height: {
-          total: 10, // 900 is the default
-          // startingSize: 0, // default
+          stop: 10, // 900 is the default
+          start: 8, // default
         },
     }),
   ],
 };
 ```
 
-The above configuration would generate the following CSS:
+The above configuration would roughly generate the following CSS:
 
 ```css
 .w-0px {
@@ -111,38 +111,6 @@ The above configuration would generate the following CSS:
 
 .w-10px {
   width: 10px;
-}
-
-.h-0px {
-  height: 0;
-}
-
-.h-1px {
-  height: 1px;
-}
-
-.h-2px {
-  height: 2px;
-}
-
-.h-3px {
-  height: 3px;
-}
-
-.h-4px {
-  height: 4px;
-}
-
-.h-5px {
-  height: 5px;
-}
-
-.h-6px {
-  height: 6px;
-}
-
-.h-7px {
-  height: 7px;
 }
 
 .h-8px {

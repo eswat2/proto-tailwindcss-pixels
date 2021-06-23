@@ -118,7 +118,7 @@ test('A single value (+1) can be added... [ width ]', () => {
     {},
     {
       width: {
-        total: 1,
+        stop: 1,
       },
     }
   ).then((css) => {
@@ -129,12 +129,30 @@ test('A single value (+1) can be added... [ width ]', () => {
   })
 })
 
+test('A range of values can be added... [ width ]', () => {
+  return generatePluginCss(
+    {},
+    {
+      width: {
+        stop: 40,
+        start: 30
+      },
+    }
+  ).then((css) => {
+    const list = css.match(/\.w-[34][0-9]px/g)
+    const results = ['.w-30px', '.w-31px', '.w-40px']
+
+    expect(list).toEqual(expect.arrayContaining(results))
+    expect(list.length).toEqual(11)
+  })
+})
+
 test('Multiple values can be added... [ spacing ]', () => {
   return generatePluginCss(
     {},
     {
       spacing: {
-        total: 10,
+        stop: 10,
       },
     }
   ).then((css) => {
@@ -152,16 +170,16 @@ test('Multiple values can be added... [ spacing + max/min ]', () => {
     {},
     {
       spacing: {
-        total: 10,
+        stop: 10,
       },
       maxWidth: {
-        total: 10,
+        stop: 10,
       },
       minWidth: {
-        total: 10,
+        stop: 10,
       },
       minHeight: {
-        total: 10,
+        stop: 10,
       },
     }
   ).then((css) => {
@@ -178,7 +196,7 @@ test('Multiple values can be added... [ maxWidth ]', () => {
     {},
     {
       maxWidth: {
-        total: 10,
+        stop: 10,
       },
     }
   ).then((css) => {
@@ -195,7 +213,7 @@ test('Multiple values can be added... [ fontSize ]', () => {
     {},
     {
       fontSize: {
-        total: 10,
+        stop: 10,
       },
     }
   ).then((css) => {
@@ -212,7 +230,7 @@ test('Multiple values can be added... [ lineHeight ]', () => {
     {},
     {
       lineHeight: {
-        total: 10,
+        stop: 10,
       },
     }
   ).then((css) => {

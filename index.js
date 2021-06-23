@@ -8,16 +8,16 @@ const plugin = require('tailwindcss/plugin')
 /**
  * getSizes
  * Handles getting sizes in pixels...
- * @param {int} totalSizes
- * @param {int} startingValue
+ * @param {int} stop
+ * @param {int} start
  * @return {object}
  */
-const getSizes = (totalSizes = 900, startingValue = 0) => {
+const getSizes = (stop = 900, start = 0) => {
   // The following generates an array of increasing values from the totalSizes above.
-  const sizeArray = Array.from(Array(startingValue + totalSizes + 1).keys())
-  const sliced = sizeArray.slice(startingValue, sizeArray.length)
+  const sizeArray = Array.from(Array(stop + 1).keys())
+  const sliced = sizeArray.slice(start, sizeArray.length)
   // Traverse the array and generate sizes in pxs.
-  const sizes = sliced.map((i, x) =>
+  const sizes = sliced.map((x) =>
     x > 0 ? { [`${x}px`]: `${x}px;` } : { [`${x}px`]: `${x};` }
   )
   // Merge the array of objects into a single one
@@ -57,8 +57,8 @@ module.exports = plugin.withOptions(
       keys.forEach((key) => {
         if (tags.includes(key)) {
           const results = getSizes(
-            options[key].total || 900,
-            options[key].startingSize || 0
+            options[key].stop || 900,
+            options[key].start || 0
           )
           output.theme.extend[key] = { ...results }
         }
