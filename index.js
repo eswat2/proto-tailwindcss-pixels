@@ -56,10 +56,12 @@ module.exports = plugin.withOptions(
 
       keys.forEach((key) => {
         if (tags.includes(key)) {
-          const results = getSizes(
-            options[key].stop || 900,
-            options[key].start || 0
-          )
+          // NOTE:  support the new and old option props...
+          const stop = options[key].stop || options[key].total || 900
+          const start = options[key].start || options[key].startingValue || 0
+
+          const results = getSizes(stop, start)
+
           output.theme.extend[key] = { ...results }
         }
       })

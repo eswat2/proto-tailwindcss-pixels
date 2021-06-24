@@ -135,7 +135,43 @@ test('A range of values can be added... [ width ]', () => {
     {
       width: {
         stop: 40,
-        start: 30
+        start: 30,
+      },
+    }
+  ).then((css) => {
+    const list = css.match(/\.w-[34][0-9]px/g)
+    const results = ['.w-30px', '.w-31px', '.w-40px']
+
+    expect(list).toEqual(expect.arrayContaining(results))
+    expect(list.length).toEqual(11)
+  })
+})
+
+test('A single value can be added... [ width ]', () => {
+  return generatePluginCss(
+    {},
+    {
+      width: {
+        stop: 40,
+        start: 40,
+      },
+    }
+  ).then((css) => {
+    const list = css.match(/\.w-[34][0-9]px/g)
+    const results = ['.w-40px']
+
+    expect(list).toEqual(results)
+    expect(list.length).toEqual(1)
+  })
+})
+
+test('Supports the old option properties... [ width ]', () => {
+  return generatePluginCss(
+    {},
+    {
+      width: {
+        total: 40,
+        startingValue: 30,
       },
     }
   ).then((css) => {
