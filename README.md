@@ -45,21 +45,28 @@ Specifying any of those in options will generate pixel classes as shown below.
 > The plugin no longer generates width & height by default, you must specify which tags you want to generate...
 
 ## Options Available
+
 You can pass along number values to define the range of the generated sizes.
+
+```
+  start: number,  // defaults to 0
+   stop: number,  // defaults to 900
+```
+
+For example:
 
 ```js
 // tailwind.config.js
 module.exports = {
   plugins: [
-    // Generates 10 widths and heights in pxs
+    // Generate 10 widths and 3 heights in pxs
     require('proto-tailwindcss-pixels')({
         width: {
-          stop: 10, // 900 is the default
-          // start: 0, // default
+          stop: 10,
         },
         height: {
-          stop: 10, // 900 is the default
-          start: 8, // default
+          stop: 10,
+          start: 8,
         },
     }),
   ],
