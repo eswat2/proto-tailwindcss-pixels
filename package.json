@@ -23,7 +23,7 @@
     "jest-matcher-css": "1.1.0",
     "lodash": "4.17.21",
     "postcss": "8.3.5",
-    "rollup": "2.53.2",
-    "tailwindcss": "2.2.4"
+    "rollup": "2.53.3",
+    "tailwindcss": "2.2.5"
   }
 }
