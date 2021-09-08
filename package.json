@@ -19,11 +19,11 @@
   },
   "devDependencies": {
     "autoprefixer": "10.3.4",
-    "jest": "27.1.0",
+    "jest": "27.1.1",
     "jest-matcher-css": "1.1.0",
     "lodash": "4.17.21",
     "postcss": "8.3.6",
     "rollup": "2.56.3",
-    "tailwindcss": "2.2.11"
+    "tailwindcss": "2.2.13"
   }
 }
