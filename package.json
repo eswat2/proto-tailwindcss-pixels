@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.0",
-    "jest": "27.4.3",
+    "jest": "27.4.4",
     "jest-matcher-css": "1.1.0",
     "lodash": "4.17.21",
     "postcss": "8.4.4",
