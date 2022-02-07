@@ -24,6 +24,6 @@
     "lodash": "4.17.21",
     "postcss": "8.4.6",
     "rollup": "2.67.1",
-    "tailwindcss": "3.0.18"
+    "tailwindcss": "3.0.19"
   }
 }
