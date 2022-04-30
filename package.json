@@ -22,8 +22,8 @@
     "jest": "28.0.3",
     "jest-matcher-css": "1.1.0",
     "lodash": "4.17.21",
-    "postcss": "8.4.12",
-    "rollup": "2.70.2",
+    "postcss": "8.4.13",
+    "rollup": "2.71.1",
     "tailwindcss": "3.0.24"
   }
 }
