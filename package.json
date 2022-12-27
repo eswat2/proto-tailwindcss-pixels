@@ -8,7 +8,7 @@
   "repository": "https://github.com/eswat2/proto-tailwindcss-pixels.git",
   "bugs": "https://github.com/eswat2/proto-tailwindcss-pixels/issues",
   "homepage": "https://github.com/eswat2/proto-tailwindcss-pixels",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "jest",
     "deploy": "echo -- run [ np patch ]",
