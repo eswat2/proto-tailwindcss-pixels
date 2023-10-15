@@ -1,6 +1,6 @@
 {
   "name": "proto-tailwindcss-pixels",
-  "version": "0.0.266",
+  "version": "0.0.267",
   "description": "Tailwind CSS 3.x plugin that generates pixel classes for tricky pixel-perfect layouts.",
   "main": "index.js",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
