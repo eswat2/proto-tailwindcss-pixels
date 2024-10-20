@@ -9,7 +9,7 @@
   "bugs": "https://github.com/eswat2/proto-tailwindcss-pixels/issues",
   "homepage": "https://github.com/eswat2/proto-tailwindcss-pixels",
   "engines": {
-    "node": "~20"
+    "node": "~22"
   },
   "private": false,
   "scripts": {
